@@ -31,9 +31,14 @@ env/
 *.swp
 *.swo
 
-# Testing
-.pytest_cache/
+# Test outputs
+tests/output/
+*.png
+!samples/*.png  # Keep any example PNGs in samples directory
+
+# Coverage
 .coverage
+coverage.xml
 htmlcov/
 
 # Misc
