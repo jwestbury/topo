@@ -1,0 +1,59 @@
+Usage
+=====
+
+Command Line Interface
+---------------------
+
+The basic usage of Topogen is through its command-line interface:
+
+.. code-block:: console
+
+    $ python -m topogen.cli input.csv --output map.png --units ft --grid-spacing 2.0
+
+Arguments
+~~~~~~~~~
+
+* ``input.csv``: Path to your input CSV file
+* ``--output``: Path to save the visualization (optional)
+* ``--units``: Output units ('in', 'ft', 'cm', 'm'), default: ft
+* ``--grid-spacing``: Distance between measurements in input units, default: 2.0
+
+Input File Format
+----------------
+
+The input CSV file should contain elevation measurements in a grid format:
+
+* Numbers represent elevation measurements
+* 'X' represents missing data points (will be interpolated)
+* 'B' represents boundary markers
+
+Example input file:
+
+.. code-block:: text
+
+    10.5,11.2,X,12.1
+    11.0,X,12.5,12.8
+    B,12.2,12.8,13.0
+    12.0,12.5,13.0,13.2
+
+Python API
+----------
+
+You can also use Topogen as a Python library:
+
+.. code-block:: python
+
+    from topogen import TopoConfig, process_topography
+
+    # Configure the processing
+    config = TopoConfig(
+        grid_spacing=2.0,
+        input_units="in",
+        output_units="ft"
+    )
+
+    # Process the data
+    with open("input.csv", "r") as f:
+        process_topography(f, config)
+
+See the :doc:`API Reference <api/modules>` for detailed documentation of all available functions and classes. 

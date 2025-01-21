@@ -1,0 +1,189 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>topo.data_processing package &mdash; topo 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="topo.interpolation package" href="topo.interpolation.html" />
+    <link rel="prev" title="topo.config package" href="topo.config.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            topo
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">topo</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="topo.html">topo package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="topo.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="topo.config.html">topo.config package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">topo.data_processing package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="topo.interpolation.html">topo.interpolation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="topo.visualization.html">topo.visualization package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="topo.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topo.html#module-topo.cli">topo.cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topo.html#module-topo.main">topo.main module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topo.html#module-topo">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">topo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">topo</a></li>
+          <li class="breadcrumb-item"><a href="topo.html">topo package</a></li>
+      <li class="breadcrumb-item active">topo.data_processing package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/topo.data_processing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="topo-data-processing-package">
+<h1>topo.data_processing package<a class="headerlink" href="#topo-data-processing-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-topo.data_processing.data_processing">
+<span id="topo-data-processing-data-processing-module"></span><h2>topo.data_processing.data_processing module<a class="headerlink" href="#module-topo.data_processing.data_processing" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="topo.data_processing.data_processing.parse_csv">
+<span class="sig-prename descclassname"><span class="pre">topo.data_processing.data_processing.</span></span><span class="sig-name descname"><span class="pre">parse_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_like</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/topo/data_processing/data_processing.html#parse_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#topo.data_processing.data_processing.parse_csv" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Read a CSV (file-like object) into a 2D NumPy array of objects:</dt><dd><ul class="simple">
+<li><p>float for numeric entries (converted to config.input_units),</p></li>
+<li><p>np.nan for ‘X’ (missing),</p></li>
+<li><p>‘B’ for boundary.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="topo.data_processing.data_processing.find_min_value">
+<span class="sig-prename descclassname"><span class="pre">topo.data_processing.data_processing.</span></span><span class="sig-name descname"><span class="pre">find_min_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/topo/data_processing/data_processing.html#find_min_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#topo.data_processing.data_processing.find_min_value" title="Link to this definition"></a></dt>
+<dd><p>Find the minimum numeric value in the array, ignoring boundaries (‘B’) and np.nan.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="topo.data_processing.data_processing.get_unit_conversion_factor">
+<span class="sig-prename descclassname"><span class="pre">topo.data_processing.data_processing.</span></span><span class="sig-name descname"><span class="pre">get_unit_conversion_factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_unit</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/topo/data_processing/data_processing.html#get_unit_conversion_factor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#topo.data_processing.data_processing.get_unit_conversion_factor" title="Link to this definition"></a></dt>
+<dd><p>Get the conversion factor between different units of measurement.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="topo.data_processing.data_processing.transform_data">
+<span class="sig-prename descclassname"><span class="pre">topo.data_processing.data_processing.</span></span><span class="sig-name descname"><span class="pre">transform_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/topo/data_processing/data_processing.html#transform_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#topo.data_processing.data_processing.transform_data" title="Link to this definition"></a></dt>
+<dd><p>Transform the data according to configuration settings.</p>
+<p>This includes:
+- Shifting values so minimum is 0 (if config.apply_transform is True)
+- Converting units from input to output units
+- Rounding to specified precision (if config.rounding is not None)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – 2D NumPy array of elevation data</p></li>
+<li><p><strong>config</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="topo.config.html#topo.config.config.TopoConfig" title="topo.config.config.TopoConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">TopoConfig</span></code></a></span>) – Configuration object with transformation settings</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="topo.data_processing.data_processing.find_max_value">
+<span class="sig-prename descclassname"><span class="pre">topo.data_processing.data_processing.</span></span><span class="sig-name descname"><span class="pre">find_max_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/topo/data_processing/data_processing.html#find_max_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#topo.data_processing.data_processing.find_max_value" title="Link to this definition"></a></dt>
+<dd><p>Find the maximum numeric value in the array, ignoring boundaries (‘B’) and np.nan.</p>
+</dd></dl>
+
+</section>
+<section id="module-topo.data_processing">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-topo.data_processing" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="topo.config.html" class="btn btn-neutral float-left" title="topo.config package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="topo.interpolation.html" class="btn btn-neutral float-right" title="topo.interpolation package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Topo Contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

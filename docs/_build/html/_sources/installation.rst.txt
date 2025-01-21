@@ -1,0 +1,32 @@
+Installation
+============
+
+From PyPI
+---------
+
+To install topo, run this command in your terminal:
+
+.. code-block:: console
+
+    $ pip install topo
+
+From source
+-----------
+
+The source code is available on GitHub. You can clone the repository and install it with:
+
+.. code-block:: console
+
+    $ git clone https://github.com/username/topo.git
+    $ cd topo
+    $ pip install -e .
+
+Development installation
+-----------------------
+
+If you want to contribute to the project, you can install the development dependencies with:
+
+.. code-block:: console
+
+    $ pip install -r requirements.txt
+    $ pip install -e . 
