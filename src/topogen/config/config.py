@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from typing import Tuple, Optional, Literal
+from typing import Tuple, Optional, Literal, List
 
 class TopoConfig:
     """
@@ -44,15 +44,16 @@ class TopoConfig:
         contour_spacing: float = 1.0,     # spacing between contour lines in output_units (e.g., 12 inches)
         contour_cmap="RdYlGn_r",  # Red-Yellow-Green (reversed: green=low, red=high)
         smooth_contours: bool = False,    # whether to apply smoothing to contour lines
-        smooth_factor: float = 0.0,        # amount of smoothing to apply (0.0 to 1.0, higher = smoother)
+        smooth_factor: float = 0.5,        # amount of smoothing to apply (0.0 to 1.0, higher = smoother)
         figure_size: Tuple[float, float] = (10, 8),
-        dpi: int = 300,
+        dpi: int = 150,
         show_plot: bool = True,           # display the interactive window
         save_path: Optional[str] = None,           # where to save the figure (None = no save)
         # Axis labeling
         x_label="Width",
         y_label="Height",
-        title="Topographic Map"
+        title="Topographic Map",
+        custom_colormap: Optional[List[Tuple[float, float, float]]] = None
     ):
         # Validate grid spacing
         if not isinstance(grid_spacing, (int, float)) or grid_spacing <= 0:
@@ -118,4 +119,14 @@ class TopoConfig:
         self.save_path = str(save_path) if save_path is not None else None
         self.x_label = str(x_label)
         self.y_label = str(y_label)
-        self.title = str(title) 
+        self.title = str(title)
+        self.custom_colormap = custom_colormap
+
+        # Additional validation for custom_colormap
+        if custom_colormap is not None:
+            if not isinstance(custom_colormap, list) or len(custom_colormap) != 2:
+                raise ValueError("custom_colormap must be a list of exactly two RGB tuples")
+            for color in custom_colormap:
+                if not isinstance(color, tuple) or len(color) != 3 or \
+                   not all(isinstance(x, (int, float)) and 0 <= x <= 1 for x in color):
+                    raise ValueError("Each color in custom_colormap must be a tuple of three floats between 0 and 1") 

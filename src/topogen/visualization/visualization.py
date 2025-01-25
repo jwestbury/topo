@@ -5,6 +5,7 @@ import numpy as np
 from numpy.typing import NDArray
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter
+from matplotlib.colors import LinearSegmentedColormap
 from ..config.config import TopoConfig
 from ..data_processing.data_processing import NumericArray, get_unit_conversion_factor
 
@@ -41,7 +42,13 @@ def generate_topographic_map(data: NumericArray, config: TopoConfig) -> None:
         # Create the figure
         plt.figure(figsize=config.figure_size, dpi=config.dpi)
         
-        # Generate X and Y coordinate meshes
+        # Create custom colormap if specified
+        if config.custom_colormap is not None:
+            start_color, end_color = config.custom_colormap
+            cmap = LinearSegmentedColormap.from_list('custom', [start_color, end_color])
+        else:
+            cmap = config.contour_cmap
+        
         # Convert grid spacing to output units if needed
         grid_spacing: float
         if config.input_units != config.output_units:
@@ -89,7 +96,7 @@ def generate_topographic_map(data: NumericArray, config: TopoConfig) -> None:
         
         # Create filled contours first for the continuous color gradient
         contourf = plt.contourf(X, Y, plot_data, levels=levels,
-                               cmap=config.contour_cmap, extend='both')
+                               cmap=cmap, extend='both')
         
         # Add contour lines with labels
         contour = plt.contour(X, Y, plot_data, levels=levels,
