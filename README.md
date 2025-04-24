@@ -1,8 +1,16 @@
 # Topogen
 
-A Python package for processing and visualizing topographic survey data. Convert raw elevation measurements into beautiful contour maps with support for interpolation, unit conversion, and customizable visualization options.
+## Background
 
-Written with extensive help from Cursor IDE, since I'm not a civil engineer or surveyor. Tests are written to generate maps which can be sanity-checked by eye; there may be bugs I haven't spotted, though, so *caveat emptor*.
+I have an average American garden - a quarter acre lot with a one-story house bifurcating the garden. The back garden is built on a slope, which presents challenges for site design. I didn't want to pay many thousands of dollars to a surveyor, but I wanted more granularity than the traditional A-frame contours would provide, and something I could capture digitally for posterity and ease of iteration.
+
+I plotted my back garden by attaching hooks to the back fence every two feet. Then, using my trusty Little Giant ladder, I tied a taut line hitch at one end of a length of mason line, securing the other to my ladder. I slipped the taut line hitch over a hook along the back fence, placed my ladder at the opposite end of the garden, and adjusted the height to ensure the line was level (using a line level to ensure reasonable accuracy). On the first pass, I marked out my mason line at two-foot intervals, then walked the length of the line, taking height measurements every two feet. When one pass was done, I slid the ladder two feet further down the width of the garden, slipped my hitch over the next hook, and repeated the process. In the end, this produced a grid of measurements - how many inches the ground was below the mason line.
+
+I then wrote Topogen, with extensive help from Cursor IDE - after all, I am not a civil engineer or a surveyor, and while I'm pretty good at reading a topographic map after years of hiking and backpacking - and I do not hide an abiding love of the UK's Ordnance Survey maps - I have no idea how to actually make one. At any rate, I implemented all the features I needed. In particular, I needed the tool to capture what I called my "zero point": Because the hooks along the back fence were above ground level for the entirety of their run, my mason line was never less than 18 inches above the ground! Thus, we needed to capture this fact, and then invert the measurements to convert them into a height map (rather than a depth map).
+
+In the end, this tool produces topographic maps which are excellent for my own use, and I hope they will be excellent for someone else's use, too! Because I used AI to help with the bits I didn't have any preexisting knowledge of, there are likely some bugs; but the tests produce images which can be visually spot-checked to ensure the behavior is as expected, and I know the app to work well for my own garden.
+
+Please do contribute if you think you can make this tool better; it takes only a bit of hard graft to produce the measurements, and topographic maps empower us to understand our gardens so much better than we do.
 
 ## Features
 
