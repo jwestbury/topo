@@ -2,6 +2,8 @@
 
 A Python package for processing and visualizing topographic survey data. Convert raw elevation measurements into beautiful contour maps with support for interpolation, unit conversion, and customizable visualization options.
 
+Written with extensive help from Cursor IDE, since I'm not a civil engineer or surveyor. Tests are written to generate maps which can be sanity-checked by eye; there may be bugs I haven't spotted, though, so *caveat emptor*.
+
 ## Features
 
 - Process CSV files containing elevation measurements
